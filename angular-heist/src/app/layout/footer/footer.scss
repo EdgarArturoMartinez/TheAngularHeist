@@ -1,0 +1,44 @@
+.footer {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;  // Pushes footer to bottom if using flexbox layout
+  padding: 2rem 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    margin: 0 0 0.5rem 0;
+    color: #cbd5e1;
+  }
+
+  &__subtext {
+    font-size: 0.75rem;
+    margin: 0;
+    color: #64748b;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  &__link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #cbd5e1;
+    }
+  }
+}

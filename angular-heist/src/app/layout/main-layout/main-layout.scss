@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+
+  &__content {
+    flex: 1;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    // Add some shadow for depth
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+  }
+}

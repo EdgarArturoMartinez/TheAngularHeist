@@ -1,27 +1,20 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Button } from './shared/components/button/button';
+import { Component } from '@angular/core';
+import { MainLayout } from './layout/main-layout/main-layout';
 
+/**
+ * Root application component
+ * This component serves as the entry point for the Angular application
+ * Uses MainLayout component to provide consistent app shell structure
+ */
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Button],
+  imports: [MainLayout],  // Import MainLayout for application shell
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('angular-heist');
-  
   /**
-   * Tracks the last button that was clicked
+   * Application title
    */
-  lastClicked = signal<string>('None');
-
-  /**
-   * Handles button click events
-   * @param buttonName - The name of the button that was clicked
-   */
-  onButtonClick(buttonName: string): void {
-    this.lastClicked.set(buttonName);
-    console.log(`Button clicked: ${buttonName}`);
-  }
+  title = 'angular-heist';
 }
